@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        justify-content: center;
+        height: 0;
+        overflow: hidden;
+        transition: all 1s;
+        position: relative;
+        top:50px;
+        opacity: 0%;
+      }
+      li{
+        background-color: gray;
+        border: 1px solid black;
+        padding: 10px;
+        width: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li>Home</li>
+      <li>About</li>
+      <li>Programs</li>
+      <li>Product</li>
+      <li>Contact</li>
+    </ul>
+    <button onclick="press()" >Show me</button>
+
+    <script>
+      let press=()=>{
+        let navbar=document.querySelector(".navbar");
+        if(navbar.style.height=="0px"){
+          navbar.style.height="200px"
+          navbar.style.top="0px"
+          navbar.style.opacity="100%"
+        }else{
+          navbar.style.height="0px"
+          navbar.style.top="50px"
+          navbar.style.opacity="0%"
+        }
+      }
+
+
+
+    //   let press=()=>{
+    //     for (let index = 0; index < object.length; index++) {
+    //       let div =document.createElement("div")
+    //       div.className="menu flex"
+    //       let name=document.createElement("p")
+    //       let surname=document.createElement("p")
+    //       let age=document.createElement("p")
+    //       let phone=document.createElement("p")
+    //       name.innerHTML=object[index].name
+    //       surname.innerHTML=object[index].surName
+    //       age.innerHTML=object[index].age
+    //       phone.innerHTML=object[index].phone
+    //       div.appendChild(name)
+    //       div.appendChild(surname)
+    //       div.appendChild(age)
+    //       div.appendChild(phone)
+    //       document.body.appendChild(div)
+    //     }
+    //   }   
+    //   let object=[
+    //     {
+    //     name:"Murad",
+    //     surName:"Aliyev",
+    //     age:22,
+    //     phone:"0704405052"
+    //   },
+    //     {
+    //     name:"Elvin",
+    //     surName:"Zulfuqarli",
+    //     age:29,
+    //     phone:"0704405052"
+    //   },
+    //     {
+    //     name:"Mirrehim",
+    //     surName:"Mirvelisli",
+    //     age:14,
+    //     phone:"0704405052"
+    //   },
+    //     {
+    //     name:"Revan",
+    //     surName:"Sariyev",
+    //     age:16,
+    //     phone:"0704405052"
+    //   }
+    // ]
+    // console.log(object);
+
+
+
+      // let person1Name=prompt("Birinci adamin adi:")
+      // let person2Name=prompt("Ikinci adamin adi:")
+      // let person1weight=prompt(person1Name+"in cekisi:")
+      // let person2weight=prompt(`${person2Name}in cekisi:`)
+      // let person1height=prompt(`${person1Name}in boyu:`)
+      // let person2height=prompt(`${person2Name}in boyu:`)
+      // let BMI1=person1weight/(person1height*person1height)
+      // let BMI2=person2weight/(person2height*person2height)
+      // alert("BMI1:"+BMI1)
+      // alert("BMI2:"+BMI2)
+      // if (BMI1>BMI2) {
+      //   alert(person1Name+"in BMIi boyukdur "+person2Name)
+      // }else{
+      //   alert(person2Name+"in BMIi boyukdur "+person1Name)
+      // }
+      // let name = prompt("Who's there?");
+      // if (name == "Cancel") {
+      //   alert("Cancelled1");
+      // } else if (name == "Other") {
+      //   alert("I don't know you");
+      // } else if (name == "Admin") {
+      //   let password = prompt("Enter the Password:");
+      //   if (password == "Cancel") {
+      //     alert("Cancelled2");
+      //   } else if (password == "Other") {
+      //     alert("Wrong Password");
+      //   } else if (password == "TheMaster") {
+      //     alert("Welcome");
+      //   }
+      // }
+      // let a=prompt("birinci bucaq:")
+      // let b=prompt("ikinci bucaq:")
+      // let c=prompt("ucuncu bucaq:")
+      // if (a==90||b==90||c==90) {
+      //   alert("Duzbucaqli ucbucaq")
+      // }else if(a==b&&b==c){
+      //   alert("Beraberterefli ucbucaq")
+      // }else if(a==b||b==c||a==c){
+      //   alert("Beraberyanli ucbucaq")
+      // }else{
+      //   alert("Muxtelifterefli ucbucaq")
+      // }
+      // let month=prompt("Ayi daxil edin:")
+      // month=Number(month)
+
+      // switch(month){
+      //   case 1:
+      //     alert("Yanvar")
+      //     break
+      //   case 2:
+      //     alert("Fevral")
+      //     break
+      //   case 3:
+      //     alert("Mart")
+      //     break
+      //   case 4:
+      //     alert("Aprel")
+      //     break
+      //   case 5:
+      //     alert("May")
+      //     break
+      //   case 6:
+      //     alert("Iyun")
+      //     break
+      //   case 7:
+      //     alert("Iyul")
+      //     break
+      //   case 8:
+      //     alert("Avqust")
+      //     break
+      //   case 9:
+      //     alert("Sentyabr")
+      //     break
+      //   case 10:
+      //     alert("Oktyabr")
+      //     break
+      //   case 11:
+      //     alert("Noyabr")
+      //     break
+      //   case 12:
+      //     alert("Dekabr")
+      //     break
+      //   default:
+      //     alert("Bele bir ay yoxdu")
+      //     break
+      // }
+      // let a=prompt("Ededi daxil edin:")
+      // let sade_eded
+      // for (let i=2;i<a;i++) {
+      //   if(a%i==0){
+      //     alert("sade eded deyil")
+      //     sade_eded=false
+      //     break
+      //   }else{
+      //     sade_eded=true
+      //   }
+      // }
+      // if (sade_eded) {
+      //   alert("Murekkeb ededdir")
+      // }
+      // let a=prompt("Ededi daxil edin:")
+      // let array=[]
+      // for (let i=2;i<a;i++) {
+      //   if(a%i==0){
+      //     array.push(i)
+      //   }
+      // }
+      // alert(array);
+      // while (true) {
+      //   b = prompt("Enter your Name");
+      //   if (b=="Murad") {
+      //     alert("Sen girme")
+      //     break
+      //   } else {
+      //     alert("Buyurun");
+
+      //   }
+      // }
+      // let min=prompt("Enter minimum number:");
+      // let max=prompt("Enter maximum number:");
+      // min=Number(min);
+      // max=Number(max);
+      // for(let a=min;a<=max;a++){
+      //   if (a%2==1) {
+      //     continue;
+      //   alert(a);
+      // }
+      //   function show(min,max,even){
+      //     for(let a=min;a<=max;a++){
+      //     if (a%2==even) {
+      //       continue;
+      //     }
+      //     alert(a);
+      //   }
+      // }
+      //   let min=prompt("Enter minimum number:");
+      //   let max=prompt("Enter maximum number:");
+      //   let even=prompt("Tek ya cut");
+      //   if(even=="cut"){
+      //     even=1
+      //   }else{
+      //     even=0
+      //   }
+      //   min=Number(min);
+      //   max=Number(max);
+      //   show(min,max,even)
+
+      // function isPrime(n){
+      //   for(let i=2;i<n;i++){
+      //     if(n%i==0){
+      //       return false
+      //     }
+      //   }
+      //   return true
+      // }
+
+      // function showPrimes(n){
+      //   for(let i=2;i<n;i++){
+      //     if(isPrime(i)){
+      //       console.log(i);
+      //     }
+      //   }
+      // }
+
+      // showPrimes(1000)
+
+      //   function max(a,b,c){
+      //   if(a>=b&&a>=c){
+      //     return a
+      //   }else if(b>=a&&b>=c){
+      //     return b
+      //   }else{
+      //     return c
+      //   }
+      // }
+      // alert(max(22,12,3))
+
+      //     let double = function(a) {
+      //       return a*2
+      //     }
+
+      //     let triple=(a)=>{
+      //       return a*3
+      //     }
+
+      // alert(triple(3))
+      // function double(a){
+      //   return a*2
+      // }
+      //  let a=[1,2,3,4,9,5,6,7,8]
+      //  let b=a.length
+      //   console.log(b);
+      //   console.log("Hello");
+      //  console.log(a[Math.floor((b/2))])
+
+      // let array=[]
+      // for(let i=0;i<100;i++){
+      //   array.push(Math.floor(Math.random()*100))
+      // }
+      // let sum=0
+      // for(let i=0;i<array.length;i++){
+      //   sum=sum+array[i]
+      // }
+      // alert(sum/array.length)
+    </script>
+  </body>
+</html>

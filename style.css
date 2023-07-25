@@ -1,0 +1,16 @@
+.greenSmall{
+    width: 290px;
+    background-color: rgba(172, 255, 47, 0.242);
+    padding: 15px;
+    border-color: greenyellow;
+    border-radius: 5px;
+}
+.redSmall{
+    background-color: rgba(255, 0, 0, 0.239);
+    border-color: red;
+}
+.header{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
